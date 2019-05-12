@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./css/topMenu.css">
+        <link rel="stylesheet" href="./css/message.css">
+        <link rel="stylesheet" href="./css/spider.css">
+        <title>Document</title>
+        <style>
+                * {
+                        padding: 0;
+                        margin: 0;
+                        text-decoration: none;
+                }
+
+                html,
+                body {
+                        background-color: #eee;
+                }
+
+                .bottom {
+                        position: absolute;
+                        bottom: 0;
+
+                }
+
+                .clear {
+                        display: block;
+                        height: 0;
+                        clear: both;
+                        visibility: hidden;
+                }
+
+                .top_content {
+                        max-width: 1024px;
+                        height: 371px;
+                        background-color: white;
+                        position: relative;
+                        left: 50%;
+                        margin-left: -512px;
+                        margin-top: 1em;
+                        margin-bottom: 1em;
+                        display: flex;
+                        flex-direction: row;
+                }
+                .top_content ul{
+                        list-style: none;
+                        width: 353px;
+                        height: 100%;;
+                        display: flex;
+                        flex-direction: column;
+
+                }
+                .top_content li
+                {
+                        flex: 1;
+                        width: 284px;
+                }
+
+                /* -----------------------------------top_menu */
+                .top_menu{
+                        height: 9em;
+                        width: 100%;
+                        background-color: white;
+                }
+                /* -----------------------------------hot_message */
+                .hot_message{
+                        width: 1024px;
+                        min-height: 14em;
+                        background-color: white;
+                        position: relative;
+                        left: 50%;
+                        margin-left: -512px;
+
+                }
+                .hot_message ol{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                }
+                .hot_message li{
+                        margin: 1em 2em;
+                }
+        </style>
+</head>
+
+<body>
+        <!-- top_menu -->
+        <div class="top_menu">
+                <ul>
+                        <div class="top_menu_menu"></div>
+                        <div class="home"><a href="#"></a></div>
+                        <li v-for="item in items"><a class="topMenu" href="#">
+                                        <p>{{item.menu}}</p>
+                                </a></li>
+                        <li class="login"><a href="#">login</a></li>
+                        <div class="research"><a href="#"></a></div>
+                </ul>
+        </div>
+<!-- ----------------------------------------------------------------------- -->
+        <div class="user_menu"></div>
+        
+
+        <div class="top_menu_dray_menu">
+        </div>
+
+        <div class="top_content">
+                <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+                <div class="spider">
+                        <div class="front"></div>
+                        <div class="top"></div>
+                        <div class="hidden"></div>
+                        <div class="bottom"></div>
+                        <!-- <div class="t"></div>
+                                                <div class="y"></div> -->
+                </div>
+
+
+
+        </div>
+        <script src="./js/vue.js"></script>
+        <script src="./js/spider.js"></script>
+        <!-- ------------------------------------------------------------------------------- -->
+
+        <div class="hot_message">
+                        <h3>热门文章</h3>
+                        <hr>
+                        <ol>
+                                <a href="">
+                                        <li></li>
+                                </a>
+                                <a href="">
+                                        <li></li>
+                                </a>
+                                <a href="">
+                                        <li></li>
+                                </a>
+                                <a href="">
+                                        <li></li>
+                                </a>
+                                <a href="">
+                                        <li></li>
+                                </a>
+                        </ol>
+                </div>
+
+
+
+
+        <!-- ----------------------------------------------------------------------------------- -->
+
+        <div class="main_box">
+                <!-- -------------------------------------------------------------------------massage-->
+                <div class="main">
+                        <fieldset class="context" v-for="item in items">
+                                <legend>message:</legend>
+                                <a href="#">
+                                        <header>
+                                                <h3>{{item.header}}</h3>
+                                        </header>
+                                        <img src="" alt="">
+                                        <p class="message">{{item.message}}</p>
+                                </a>
+                                <footer>
+                                        <time><span class="time"></span>
+                                                <p>{{item.time}}</p>
+                                        </time>
+                                        <div><span class="search"></span>
+                                                <p>{{item.search}}</p>
+                                        </div>
+                                        <div><span class="heart"></span>
+                                                <p>{{item.heart}}</p>
+                                        </div>
+                                        <div><span class="editor"></span>
+                                                <p>{{item.editor}}</p>
+                                        </div>
+                                </footer>
+                        </fieldset>
+                </div>
+
+
+        </div>
+        <div class="clear"></div>
+
+
+
+
+        <div class="bottom_menu">
+                <a href="">
+                        <div class="menu1"></div>
+                </a>
+                <div class="menu2"></div>
+                <div class="menu3"></div>
+        </div>
+
+
+        <div class="bottom" style="clear:both;">12313214115136454653254657643425456</div>
+
+</body>
+<script>
+        var message = new Vue({
+                el: '.main',
+                data: {
+                        items: [
+                                { message: '这架苏霍伊超级100型客机当地时间5日下午6时零2分，从莫斯科谢列梅捷沃国际机场起飞，要前往北部城市摩尔曼斯克。然而，飞机起飞后不久即折返，于6时30分左右硬着陆。机场方面说，由于天气状况复杂，飞机在第二次尝试后才成功硬着陆，降落时飞机起落架断裂，发动机起火。电视新闻画面显示，飞机着陆时剧烈颠簸，接着后部突然冒出火焰和黑烟，一些乘客随后通过充气滑梯逃出。火势被扑灭时，机身后部已完全烧毁，顶部塌陷。俄罗斯侦查委员会说，机上当时载有78人，其中仅37人生还，41人遇难。', header: '俄一市长曾搭乘失火客机:看到发动机两次被闪电击中', time: '2019-05-07', heart: 88, editor: 'Ydy', search: 456 }
+
+                        ]
+                }
+        });
+
+        var topMenu = new Vue({
+                el: '.top_menu',
+                data: {
+                        items: [
+                                { menu: 'html' },
+                                { menu: 'css' },
+                                { menu: 'javascript' },
+                                { menu: 'c++' }
+                        ]
+                }
+        });
+
+</script>
+
+</html>

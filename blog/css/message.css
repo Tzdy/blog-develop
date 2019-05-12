@@ -1,0 +1,133 @@
+*{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+}
+
+.main{
+        max-width: 1024px;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-left: -512px;
+        left: 50%;
+        margin-top: 500px;
+}
+
+/* ----------------------------------------------------------------- */
+a{
+        color: black;
+}
+.context{
+        width: 100%;
+        min-width: 228px;
+        height: 214px;
+        background-color: white;
+    
+}
+.context header{
+        color: green;
+        height: 2em;
+        overflow: hidden;
+} 
+.context a .message{
+        font-family: "Sans-serif";
+        font-size: 18px;       
+        height: 80px;
+       padding:0 14px;
+        overflow: hidden;
+}
+.context footer{
+       position: relative;
+       top: 70px;
+        font-size: 14px;
+        height: 14px;
+        cursor: default;
+}
+/* 150,70 */
+.context img{
+        float: left;
+        width: 230px;
+        height: 120px;
+        position: relative;
+        background: url(../images/1.jpg) no-repeat center center;
+        background-size: 230px 120px;
+}
+@media screen and (max-width:1024px){
+
+
+        .main{
+                left: 0;
+                margin-left: 0;
+        }
+}
+
+@media screen and (max-width:768px){
+        .context img{
+                width: 120px;
+                height: 62px;
+                background-size: 120px 70px;
+        }
+        .context{
+                height: 142px;;
+        }
+        .context header{
+                height: 2em;
+        }
+        .context a .message{
+                font-size: 14px;
+                height: 62px;
+        }
+        .context footer{
+                top:18px;
+        }
+}
+
+/* --------------------------------------------footer */
+/* icon都是用span */
+.context footer p{
+       float: right;
+       height: 14px;
+}
+.context span{                      
+       margin-right: 3px;
+}
+.context footer time{
+        display: block;
+        line-height: 14px;
+        float: right;
+        margin-right: 7px;
+}
+.context footer time .time{
+        background: url(../images/time.png) no-repeat center center;
+        background-size: 14px;
+        width: 14px;
+        height: 14px;
+        float: left;
+}
+.context footer div{
+        float: right;
+        margin-right: 7px;
+        line-height: 14px;
+}
+.context footer .search{
+        width: 14px;
+        height: 14px;
+        background: url(../images/search.png) no-repeat center center;
+        float: left;
+}
+.context footer .heart{
+        background: url(../images/heart.png) no-repeat center center;
+        background-size: 14px;
+        width: 14px;
+        height: 14px;
+        float: left;
+}
+.context footer .editor{
+        background: url(../images/person.png) no-repeat center center;
+        background-size: 14px;
+        width: 14px;
+        height: 14px;
+        float: left;
+}

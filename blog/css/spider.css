@@ -1,0 +1,56 @@
+.spider,
+                .spider div {
+                        width: 600px;
+                        height: 300px;
+                }
+
+                .spider {
+                        transform: perspective(800px) rotateX(0deg) rotateY(0deg);
+                        transform-style: preserve-3d;
+                        transition: transform .5s;
+                        position: relative;
+                        top: 35px;
+
+                }
+                .spider div {
+                        /* 关键 */
+                        position: absolute;
+                        font-size: 80px;
+                        line-height: 200px;
+                        text-align: center;
+                        top: 0;
+                        left: 0;
+                        /*内部样式*/
+                }
+                .top {
+                        transform: rotatex(90deg) translatez(150px);
+                        background: url(../images/1.jpg) no-repeat center center;
+                        background-size: 600px 300px;
+                }
+
+                .front {
+                        transform: translatez(150px);
+                        background: url(../images/1.jpg) no-repeat center center;
+                        background-size: 600px 300px;
+                }
+
+                .hidden {
+                        transform: rotatex(180deg) translatez(150px);
+                        background: url(../images/1.jpg) no-repeat center center;
+                        background-size: 600px 300px;
+                }
+
+                .bottom {
+                        transform: rotatex(270deg) translatez(150px);
+                        background: url(../images/1.jpg) no-repeat center center;
+                        background-size: 600px 300px;
+                }
+
+                /* .t{
+                        transform: rotateY(90deg) translateZ(250px);
+                        background-color: aqua;
+                }
+                .y{
+                        transform: rotateY(-90deg) translateZ(250px);
+                        background-color: yellow;
+                } */
