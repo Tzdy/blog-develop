@@ -44,28 +44,36 @@
                         display: flex;
                         flex-direction: row;
                 }
-                .top_content ul{
+
+                .top_content ul {
                         list-style: none;
                         width: 353px;
-                        height: 100%;;
+                        height: 100%;
                         display: flex;
                         flex-direction: column;
 
                 }
-                .top_content li
-                {
-                        flex: 1;
+
+                .top_content li {
+                        float: left;
+                        height: 25%;
                         width: 284px;
                 }
+                .top_content ul li {
+                        background: url(./images/1.jpg) no-repeat center center;
+                        background-size: 100% 100%;
+                }
+                
 
                 /* -----------------------------------top_menu */
-                .top_menu{
+                .top_menu {
                         height: 9em;
                         width: 100%;
                         background-color: white;
                 }
+
                 /* -----------------------------------hot_message */
-                .hot_message{
+                .hot_message {
                         width: 1024px;
                         min-height: 14em;
                         background-color: white;
@@ -74,12 +82,14 @@
                         margin-left: -512px;
 
                 }
-                .hot_message ol{
+
+                .hot_message ol {
                         position: relative;
                         width: 100%;
                         height: 100%;
                 }
-                .hot_message li{
+
+                .hot_message li {
                         margin: 1em 2em;
                 }
         </style>
@@ -98,19 +108,19 @@
                         <div class="research"><a href="#"></a></div>
                 </ul>
         </div>
-<!-- ----------------------------------------------------------------------- -->
+        <!-- ----------------------------------------------------------------------- -->
         <div class="user_menu"></div>
-        
+
 
         <div class="top_menu_dray_menu">
         </div>
 
         <div class="top_content">
                 <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li class="front" v-on:click="front"></li>
+                        <li class="top" v-on:click="top"></li>
+                        <li class="hidden" @click="hidden"></li>
+                        <li class="bottom" @click="bottom"></li>
                 </ul>
                 <div class="spider">
                         <div class="front"></div>
@@ -125,30 +135,29 @@
 
         </div>
         <script src="./js/vue.js"></script>
-        <script src="./js/spider.js"></script>
         <!-- ------------------------------------------------------------------------------- -->
 
         <div class="hot_message">
-                        <h3>热门文章</h3>
-                        <hr>
-                        <ol>
-                                <a href="">
-                                        <li></li>
-                                </a>
-                                <a href="">
-                                        <li></li>
-                                </a>
-                                <a href="">
-                                        <li></li>
-                                </a>
-                                <a href="">
-                                        <li></li>
-                                </a>
-                                <a href="">
-                                        <li></li>
-                                </a>
-                        </ol>
-                </div>
+                <h3>热门文章</h3>
+                <hr>
+                <ol>
+                        <a href="">
+                                <li></li>
+                        </a>
+                        <a href="">
+                                <li></li>
+                        </a>
+                        <a href="">
+                                <li></li>
+                        </a>
+                        <a href="">
+                                <li></li>
+                        </a>
+                        <a href="">
+                                <li></li>
+                        </a>
+                </ol>
+        </div>
 
 
 
@@ -203,6 +212,7 @@
         <div class="bottom" style="clear:both;">12313214115136454653254657643425456</div>
 
 </body>
+<script src="./js/spider.js"></script>
 <script>
         var message = new Vue({
                 el: '.main',
@@ -225,7 +235,31 @@
                         ]
                 }
         });
+        
 
-</script>
+
+        var top_content = new Vue({
+                el:'.top_content',
+                data:{
+                        spi:window.spider,
+                        y:0
+                },
+                methods:{
+                        front() {
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + 0 + "deg) rotateY(" + this.y + "deg)";
+                        },
+                        top() {
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -90 + "deg) rotateY(" + this.y + "deg)";
+                        },
+                        hidden() {
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -180 + "deg) rotateY(" + this.y + "deg)";
+                        },
+                        bottom() {
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -270 + "deg) rotateY(" + this.y + "deg)";
+                        }
+                }
+        });
+        
+// </script>
 
 </html>

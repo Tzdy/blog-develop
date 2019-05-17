@@ -22,25 +22,25 @@
                         left: 0;
                         /*内部样式*/
                 }
-                .top {
+                .spider .top {
                         transform: rotatex(90deg) translatez(150px);
                         background: url(../images/1.jpg) no-repeat center center;
                         background-size: 600px 300px;
                 }
 
-                .front {
+                .spider .front {
                         transform: translatez(150px);
                         background: url(../images/1.jpg) no-repeat center center;
                         background-size: 600px 300px;
                 }
 
-                .hidden {
+                .spider .hidden {
                         transform: rotatex(180deg) translatez(150px);
                         background: url(../images/1.jpg) no-repeat center center;
                         background-size: 600px 300px;
                 }
 
-                .bottom {
+                .spider .bottom {
                         transform: rotatex(270deg) translatez(150px);
                         background: url(../images/1.jpg) no-repeat center center;
                         background-size: 600px 300px;

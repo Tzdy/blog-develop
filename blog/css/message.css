@@ -3,7 +3,11 @@
         margin: 0;
         text-decoration: none;
 }
-
+h3{
+        font-size: 1em;
+        height: 100%;
+        line-height: 1em;
+}
 .main{
         max-width: 1024px;
         overflow: visible;
@@ -33,8 +37,8 @@ a{
 } 
 .context a .message{
         font-family: "Sans-serif";
-        font-size: 18px;       
-        height: 80px;
+        font-size: 1em;       
+        height: 4em;
        padding:0 14px;
         overflow: hidden;
 }
@@ -76,8 +80,8 @@ a{
                 height: 2em;
         }
         .context a .message{
-                font-size: 14px;
-                height: 62px;
+                font-size: 0.8em;
+                height: 4.0em;
         }
         .context footer{
                 top:18px;
