@@ -3,6 +3,9 @@
 
 <head>
         <meta charset="UTF-8">
+        <meta name="viewport"
+                content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./css/topMenu.css">
         <link rel="stylesheet" href="./css/message.css">
         <link rel="stylesheet" href="./css/spider.css">
@@ -17,10 +20,11 @@
                 html,
                 body {
                         background-color: #eee;
+        
                 }
 
                 .bottom {
-                        position: absolute;
+                        position: relative;
                         bottom: 0;
 
                 }
@@ -59,11 +63,12 @@
                         height: 25%;
                         width: 284px;
                 }
+
                 .top_content ul li {
                         background: url(./images/1.jpg) no-repeat center center;
                         background-size: 100% 100%;
                 }
-                
+
 
                 /* -----------------------------------top_menu */
                 .top_menu {
@@ -217,8 +222,14 @@
         var message = new Vue({
                 el: '.main',
                 data: {
-                        items: [
-                                { message: '这架苏霍伊超级100型客机当地时间5日下午6时零2分，从莫斯科谢列梅捷沃国际机场起飞，要前往北部城市摩尔曼斯克。然而，飞机起飞后不久即折返，于6时30分左右硬着陆。机场方面说，由于天气状况复杂，飞机在第二次尝试后才成功硬着陆，降落时飞机起落架断裂，发动机起火。电视新闻画面显示，飞机着陆时剧烈颠簸，接着后部突然冒出火焰和黑烟，一些乘客随后通过充气滑梯逃出。火势被扑灭时，机身后部已完全烧毁，顶部塌陷。俄罗斯侦查委员会说，机上当时载有78人，其中仅37人生还，41人遇难。', header: '俄一市长曾搭乘失火客机:看到发动机两次被闪电击中', time: '2019-05-07', heart: 88, editor: 'Ydy', search: 456 }
+                        items: [{
+                                        message: '这架苏霍伊超级100型客机当地时间5日下午6时零2分，从莫斯科谢列梅捷沃国际机场起飞，要前往北部城市摩尔曼斯克。然而，飞机起飞后不久即折返，于6时30分左右硬着陆。机场方面说，由于天气状况复杂，飞机在第二次尝试后才成功硬着陆，降落时飞机起落架断裂，发动机起火。电视新闻画面显示，飞机着陆时剧烈颠簸，接着后部突然冒出火焰和黑烟，一些乘客随后通过充气滑梯逃出。火势被扑灭时，机身后部已完全烧毁，顶部塌陷。俄罗斯侦查委员会说，机上当时载有78人，其中仅37人生还，41人遇难。',
+                                        header: '俄一市长曾搭乘失火客机:看到发动机两次被闪电击中',
+                                        time: '2019-05-07',
+                                        heart: 88,
+                                        editor: 'Ydy',
+                                        search: 456
+                                }
 
                         ]
                 }
@@ -227,39 +238,51 @@
         var topMenu = new Vue({
                 el: '.top_menu',
                 data: {
-                        items: [
-                                { menu: 'html' },
-                                { menu: 'css' },
-                                { menu: 'javascript' },
-                                { menu: 'c++' }
+                        items: [{
+                                        menu: 'html'
+                                },
+                                {
+                                        menu: 'css'
+                                },
+                                {
+                                        menu: 'javascript'
+                                },
+                                {
+                                        menu: 'c++'
+                                }
                         ]
                 }
         });
-        
+
 
 
         var top_content = new Vue({
-                el:'.top_content',
-                data:{
-                        spi:window.spider,
-                        y:0
+                el: '.top_content',
+                data: {
+                        spi: window.spider,
+                        y: 0
                 },
-                methods:{
+                methods: {
                         front() {
-                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + 0 + "deg) rotateY(" + this.y + "deg)";
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" +
+                                        0 + "deg) rotateY(" + this.y + "deg)";
                         },
                         top() {
-                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -90 + "deg) rotateY(" + this.y + "deg)";
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -
+                                        90 + "deg) rotateY(" + this.y + "deg)";
                         },
                         hidden() {
-                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -180 + "deg) rotateY(" + this.y + "deg)";
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -
+                                        180 + "deg) rotateY(" + this.y + "deg)";
                         },
                         bottom() {
-                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -270 + "deg) rotateY(" + this.y + "deg)";
+                                this.$el.children[1].style.transform = "perspective(800px) rotateX(" + -
+                                        270 + "deg) rotateY(" + this.y + "deg)";
                         }
                 }
         });
-        
-// </script>
+
+        // 
+</script>
 
 </html>

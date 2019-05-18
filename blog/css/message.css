@@ -16,7 +16,6 @@ h3{
         position: relative;
         margin-left: -512px;
         left: 50%;
-        margin-top: 500px;
 }
 
 /* ----------------------------------------------------------------- */
@@ -70,8 +69,8 @@ a{
 @media screen and (max-width:768px){
         .context img{
                 width: 120px;
-                height: 62px;
-                background-size: 120px 70px;
+                height: 51px;
+                background-size: 120px 51px;
         }
         .context{
                 height: 142px;;
